@@ -1,0 +1,23 @@
+bison -d -v  syntax.y
+flex lexical.l
+gcc  main.c semantic.c symbol.c sign.c -lfl  -o parser
+
+	./parser ./test/test_1.cmm
+	./parser ./test/test_2.cmm
+	./parser ./test/test_3.cmm
+	./parser ./test/test_4.cmm
+	./parser ./test/test_5.cmm
+	./parser ./test/test_6.cmm
+	./parser ./test/test_7.cmm
+	./parser ./test/test_8.cmm
+	./parser ./test/test_9.cmm
+	./parser ./test/test_10.cmm
+	./parser ./test/test_11.cmm
+	./parser ./test/test_12.cmm
+	./parser ./test/test_13.cmm
+	./parser ./test/test_14.cmm
+	./parser ./test/test_15.cmm
+	./parser ./test/test_16.cmm
+	./parser ./test/test_17.cmm
+	./parser ./test/test_18.cmm
+
