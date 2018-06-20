@@ -1,0 +1,5 @@
+FUNCTION	main	:
+DEC	n	16
+t1	:=	#2	*	#4
+t2	:=	&n	+	t1
+*t2	:=	#1

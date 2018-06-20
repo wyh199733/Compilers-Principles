@@ -91,8 +91,8 @@ void printCode(char* fname){printf("printstart\n");
 				printOperand(code->u.other.le,fp);break;
 			case IFGOTO_ :printf("IFGOTO\n");
 				printf("1\n");fputs("IF\t",fp);
-				printf("2\n");printOperand(code->u.ifgo.op1,fp);
-				printf("3\n");printOperand(code->u.ifgo.relop,fp);
+				printf("2\n");printOperand(code->u.ifgo.op1,fp);fputs("\t",fp);
+				printf("3\n");printOperand(code->u.ifgo.relop,fp);fputs("\t",fp);
 				printf("4\n");printOperand(code->u.ifgo.op2,fp);fputs("\t",fp);
 				printf("5\n");fputs("GOTO\t",fp);
 				printf("6\n");printOperand(code->u.ifgo.label,fp);break;
@@ -128,7 +128,7 @@ void printCode(char* fname){printf("printstart\n");
 			case FUNC_ :
 				fputs("FUNCTION\t",fp);
 				printOperand(code->u.other.le,fp);
-				fputs(":",fp);break;
+				fputs("\t:",fp);break;
 			case PARAM_ :
 				temp=code->u.other.le;
 				do{
