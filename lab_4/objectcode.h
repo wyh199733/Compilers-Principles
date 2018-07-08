@@ -20,7 +20,6 @@ typedef struct RegDescipter{
 
 typedef struct StkDescipter{
 	int length;
-	int from;
 	int old[1024];
 	VarDescipter *varstack[1024];
 }StkDescipter;
